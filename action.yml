@@ -1,0 +1,24 @@
+name: 'Keep a Changelog Release'
+description: 'Moves the Unreleased entries of a Keep a Changelog file under the version being released, then commits and pushes the change'
+branding:
+  icon: 'book-open'
+  color: 'green'
+inputs:
+  release-tag:
+    description: 'Tag of the release being published, e.g. v1.0.3. The changelog version is the tag without a leading "v".'
+    required: true
+  changelog:
+    description: 'Path to the changelog, relative to the repository root'
+    default: 'CHANGELOG.md'
+  release-date:
+    description: 'Date for the new version heading as YYYY-MM-DD, defaults to today ( UTC )'
+outputs:
+  changed:
+    description: '"true" if the changelog was updated and pushed, "false" if nothing was unreleased or the version was already in it'
+  version:
+    description: 'Version used for the new heading, e.g. 1.0.3'
+  release-notes:
+    description: 'The entries released under the new heading, as Markdown'
+runs:
+  using: 'node24'
+  main: 'index.js'

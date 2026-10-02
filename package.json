@@ -1,0 +1,18 @@
+{
+  "name": "github-action-keepachangelog-release",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub Action that moves the Unreleased entries of a Keep a Changelog file under the version being released",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bywatersolutions/github-action-keepachangelog-release.git"
+  },
+  "author": "Kyle M Hall <kyle@bywatersolutions.com>"
+}
